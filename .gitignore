@@ -1,0 +1,5 @@
+AssetBundleDemo/Library/
+*.csproj
+*.sln
+AssetBundleDemo/.vs/
+AssetBundleDemo/Temp/
