@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: eda642e749ad81f41a25add1efb1fab9
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: c63faaa1715a99c3a5813cf2b12861c9
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
@@ -48,6 +48,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 30942d7fb36d33a459605f3c4395f259, type: 2}
   - {fileID: 11400000, guid: 7a0e96ff0fcbb324e82b4a4911010ea5, type: 2}
   - {fileID: 11400000, guid: 5b664ec53a42dc547b3215b98f3d3535, type: 2}
+  - {fileID: 11400000, guid: 5cdf41fcf34ec744d89f17c7e7a3326b, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -68,7 +69,7 @@ MonoBehaviour:
       - m_Id: 7c97eeea6d885aa49a45bd7effcbc0e0
         m_Value: ServerData/[BuildTarget]
       - m_Id: fad53c79035515e4bbf76a1487b32339
-        m_Value: https://119.91.196.91/cdn/ABDemo
+        m_Value: https://cdn.spup.buzz/cdn/ABDemo
     m_ProfileEntryNames:
     - m_Id: 2d96760afc9a5e54483f534aa1e2381f
       m_Name: BuildTarget
@@ -92,6 +93,7 @@ MonoBehaviour:
     - texture
     - material
     - prefab
+    - lua
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 5f2757a1adebe724e800b9b329696149, type: 2}

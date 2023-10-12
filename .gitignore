@@ -3,3 +3,5 @@ AssetBundleDemo/Library/
 *.sln
 AssetBundleDemo/.vs/
 AssetBundleDemo/Temp/
+AssetBundleDemo/HybridCLRData/
+AssetBundleDemo/Assets/XLua/Gen/

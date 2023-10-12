@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Lua
+  m_EditorClassIdentifier: 
+  m_GroupName: Lua
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 84a57621634482f4583b5a26e4d166bb
+  m_SerializeEntries:
+  - m_GUID: 558d3d28ff47b794f872267334f3dd70
+    m_Address: hello
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - lua
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 87add0fb10a2fd146b938f8ba4991f8d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6a7b2f9bb2b785c40b3ffe586f2d504b, type: 2}
+    - {fileID: 11400000, guid: 9f88a8e1a605bc543a0c6a5f636309c8, type: 2}

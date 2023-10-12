@@ -1,0 +1,6 @@
+test={
+	name="class_test",
+	Run=function()
+			print("lua热更新2")
+		end;
+}
