@@ -17,8 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 84a57621634482f4583b5a26e4d166bb
   m_SerializeEntries:
-  - m_GUID: 558d3d28ff47b794f872267334f3dd70
-    m_Address: hello
+  - m_GUID: 2ec58b3a0716aa54291e5590d74e1b1b
+    m_Address: Lua
     m_ReadOnly: 0
     m_SerializedLabels:
     - lua
