@@ -62,6 +62,11 @@ public class XLuaManager
         _luaEnv.DoString($"require '{fileName}'");
     }
 
+    public void DoString(string code)
+    {
+        _luaEnv.DoString(code);
+    }
+
     /// <summary>
     ///  Õ∑≈
     /// </summary>

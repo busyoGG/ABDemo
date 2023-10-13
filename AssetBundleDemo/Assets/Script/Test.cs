@@ -1,9 +1,15 @@
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using XLua;
 
+[LuaCallCSharp]
 public class Test : MonoBehaviour
 {
     private int _loadingCount = 3;
+
+    [CSharpCallLua]
+    public delegate int Add(int a,int b);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +33,8 @@ public class Test : MonoBehaviour
             XLuaManager.Instance().Require(ta.name);
         }
 
+        
+
         ITest test = XLuaManager.Instance().Get<ITest>("test");
         test.Run();
 
@@ -34,6 +42,16 @@ public class Test : MonoBehaviour
         ABManager.Instance().Loading<Material>("mat_face", LoadingCallback);
         ABManager.Instance().Loading<GameObject>("pre_face", LoadingCallback);
 
+        //        XLuaManager.Instance().DoString(@"xlua.hotfix(CS.ITest, 'Run', function(self)
+        //    print('hotfix')
+        //end)");
+
+        TestFunc();
+
+        Add add = XLuaManager.Instance().Get<Add>("Add");
+
+        int result = add(1, 2);
+        Debug.Log("½á¹û" + result);
     }
 
     private void LoadingCallback(object res)
@@ -48,5 +66,10 @@ public class Test : MonoBehaviour
     private void InitScene()
     {
         Addressables.InstantiateAsync("pre_face");
+    }
+
+    public void TestFunc()
+    {
+
     }
 }

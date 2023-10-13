@@ -1627,7 +1627,7 @@ namespace XLua
         public int callbackOrder { get { return 0; } }
         public void OnPostBuildPlayerScriptDLLs(BuildReport report)
         {
-            var dir = Path.GetDirectoryName(report.files.Single(file => file.path.EndsWith("Assembly-CSharp.dll")).path);
+            var dir = Path.GetDirectoryName(report.GetFiles().Single(file => file.path.EndsWith("Assembly-CSharp.dll")).path);
             Hotfix.HotfixInject(dir);
         }
     }
@@ -1738,6 +1738,7 @@ namespace XLua
             var idMapFileNames = new List<string>();
             foreach (var injectAssemblyPath in injectAssemblyPaths)
             {
+                UnityEngine.Debug.Log(injectAssemblyPath);
                 args[0] = Path.Combine(assemblyDir, Path.GetFileName(injectAssemblyPath));
                 if (ContainNotAsciiChar(args[0]))
                 {
@@ -1750,6 +1751,14 @@ namespace XLua
                     args[2] = CSObjectWrapEditor.GeneratorConfig.common_path + "Resources/hotfix_id_map_" + injectAssemblyFileName.Substring(0, injectAssemblyFileName.Length - 4) + ".lua.txt";
                     idMapFileNames.Add(args[2]);
                 }
+                //新增代码
+                string oldArg1 = null;
+                if(args[0].EndsWith("\\Assembly-CSharp.dll")){
+                    oldArg1 = args[1];
+                    args[1] = args[0];
+                }
+                //新增代码 end
+
                 Process hotfix_injection = new Process();
                 hotfix_injection.StartInfo.FileName = mono_path;
 #if UNITY_5_6_OR_NEWER
