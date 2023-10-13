@@ -9,7 +9,6 @@ public static class HotFixCfg
     [Hotfix]
     public static List<Type> by_field = new List<Type>()
     {
-        typeof(ITest),
         typeof(Test)
     };
 }

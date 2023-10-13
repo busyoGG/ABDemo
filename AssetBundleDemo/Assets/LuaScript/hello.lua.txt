@@ -13,3 +13,9 @@ function Add(a,b)
 	print(a,b)
 	return a+b
 end
+
+function GenericTest()
+	local generic_g = xlua.get_generic_method(CS.Test,"generic")
+	local generic = generic_g(CS.System.Int32)
+	generic(6)
+end

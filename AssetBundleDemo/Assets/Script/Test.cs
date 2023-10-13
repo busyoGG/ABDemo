@@ -9,6 +9,8 @@ public class Test : MonoBehaviour
 
     [CSharpCallLua]
     public delegate int Add(int a,int b);
+    [CSharpCallLua]
+    public delegate int gen(int arg);
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,10 @@ public class Test : MonoBehaviour
 
         int result = add(1, 2);
         Debug.Log("½á¹û" + result);
+
+        gen g = XLuaManager.Instance().Get<gen>("GenericTest");
+
+        g(2);
     }
 
     private void LoadingCallback(object res)
@@ -71,5 +77,10 @@ public class Test : MonoBehaviour
     public void TestFunc()
     {
 
+    }
+
+    public static void generic<T>(T arg)
+    {
+        Debug.Log("·ºÐÍ²âÊÔ" + arg);
     }
 }
